@@ -1,0 +1,156 @@
+*{
+	box-sizing: border-box;
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear:both;
+}
+
+body
+{
+	background-image: url("backg.png");
+	font-family: lato;
+	font-weight: 300;
+	position: relative;
+	height:100vh;
+	color:#555;
+}
+.wrapper{
+	width:1000px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #fff;
+	box-shadow: 0px 10px 50px rgba(0,0,0,0.3);
+	overflow: hidden;
+}
+.player-0-panel,.player-1-panel{
+	width: 50%;
+	float: left;
+	height:600px;
+	padding:100px;
+}
+
+.player-name{
+	font-size: 40px;
+	text-align: center;
+	font-family: lato;
+	text-transform: uppercase;
+	font-weight: 100;
+	margin-top:20px;
+	margin-bottom: 10px;
+	position:relative;
+	letter-spacing: 2px;
+
+}
+.player-score{
+	text-align: center;
+	font-size: 80px;
+	font-weight: 100;
+	color: #eb4d4d;
+	margin-bottom: 130px;
+}
+.active{
+	background-color: #f7f7f7;
+}
+.active .player-name{
+	font-weight: 300;
+}
+.active .player-name::after{
+	content:"\2022";
+	font-size: 47px;
+	position:absolute;
+	color: #eb4d4d;
+	top:-7px;
+	right:10px;
+}
+.player-current-box{
+	color:#fff;
+	background-color: #eb4d4d;
+	padding:12px;
+	margin: 0 auto;
+	text-align:center;
+	width:40%;
+}
+.player-current-label{
+	color:#222;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.player-current-score{
+	font-size: 30px;
+}
+button{
+	font-size: 20px;
+    position: absolute;
+    left: 50%;
+    border: none;
+    background: none;
+    font-family: lato;
+    width: 200px;
+    transform: translate(-50%);
+    color: #555;
+    font-weight: 300;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s,color 0.3s;
+}
+.rules
+{
+	position: absolute;
+	font-size: 20px;
+	left: 85%;
+	padding:14px;
+	cursor:pointer;
+	text-transform: uppercase;
+}
+.rules:hover {font-weight: 600;}
+.credits{
+	text-align: right;
+    top: 723px;
+    position: relative;
+    font-weight: 600;
+    color: #000;
+    font-size: 20px;
+    padding-right: : 12px;
+}
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 10px; }
+button:focus {
+    outline: none;
+}
+.btn-new{top:45px;}
+.btn-roll{top:403px;}
+.btn-hold{top:467px;}
+.dice{
+	position: absolute;
+	top: 178px;
+	left:50%;
+	transform: translate(-50%);
+	height: 100px;
+	box-shadow: 0px 10px 60px rgba(0,0,0,0.1);
+}
+.btn-new::before{
+	content="\f055";
+}
+i{
+	color:#eb4d4d;
+	display:inline block;
+	margin-right: 15px;
+	font-size: 25px;
+	vertical-align: text-bottom;
+	margin-top: -4px;
+	transition: margin 0.3s;
+}
+.winner{
+	background-color: #f7f7f7;
+	font-weight: 600;
+	color:#eb4d4d;
+}
+.winner .player-name{
+	font-weight: 300;
+	color:#eb4d4d;
+}

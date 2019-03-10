@@ -1,0 +1,62 @@
+<!DOCKTYPE HTML>
+<html>
+	<head>
+		<title>Pig game</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+		<link href="fonts/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+		<link rel="icon" type="image/gif/png" href="pig.png">
+
+	</head>
+	<body>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '424566014752845',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+		<div class="wrapper clearfix">
+			<div class="player-0-panel active">
+				<div class="player-name" id="name-0">Player 1</div>
+				<div class="player-score" id="score-0">0</div>
+				<div class="player-current-box">
+					<div class="player-current-label">Current</div>
+					<div class="player-current-score" id="current-0">0</div>
+				</div>
+			</div>
+			<div class="player-1-panel">
+				<div class="player-name" id="name-1">Player 2</div>
+				<div class="player-score" id="score-1">0</div>
+				<div class="player-current-box">
+					<div class="player-current-label">Current</div>
+					<div class="player-current-score" id="current-1">0</div>
+				</div>
+			</div>
+			<button class="btn-new"><i class="fas fa-plus-circle"></i>New Game</button>
+			<button class="btn-roll"><i class="fas fa-sync-alt"></i>Roll dice</button>
+			<button class="btn-hold"><i class="fas fa-download"></i>Hold</button>
+			<img src="dice-5.png" alt="dice" class="dice">
+			<div class="rules" id="rules">Game rules</div>
+
+		</div>
+		<div class="credits">Developed by Jayanti Pesa</div>
+		<script src="app.js"></script>
+	</body>
+</html>
